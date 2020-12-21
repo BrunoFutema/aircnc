@@ -1,10 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
 
-function App() {
+import GlobalStyle from './styles/global';
+
+const App: React.FC = () => {
   return (
-    <h1>Hello AirCNC</h1>
+    <>
+      <h1>Hello AirCNC</h1>
+      <GlobalStyle />
+    </>
   );
-}
+};
 
 export default App;

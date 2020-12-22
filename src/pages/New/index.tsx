@@ -43,14 +43,17 @@ const New: React.FC = () => {
       const formData = new FormData();
       const user_id = localStorage.getItem('user');
 
-      formData.append('thumbnail', thumbnail);
-      formData.append('company', data.company);
-      formData.append('techs', data.techs);
-      formData.append('price', data.price);
+      if (user_id) {
+        formData.append('thumbnail', thumbnail);
+        formData.append('company', data.company);
+        formData.append('techs', data.techs);
+        formData.append('price', data.price);
+        formData.append('user_id', user_id);
 
-      await api.post('/spots', formData, { headers: { user_id } });
+        await api.post('/spots', formData, { headers: { user_id } });
 
-      history.push('/dashboard');
+        history.push('/dashboard');
+      }
     },
     [history, thumbnail],
   );

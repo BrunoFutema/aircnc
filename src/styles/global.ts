@@ -21,6 +21,10 @@ export default createGlobalStyle`
     background-size: cover;
     --webkit-font-smoothing: antialiased !important;
     padding-bottom: 60px;
+
+    > div {
+      margin: 0 20px;
+    }
   }
 
   body, input, button {

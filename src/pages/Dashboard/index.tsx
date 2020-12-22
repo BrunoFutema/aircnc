@@ -74,7 +74,10 @@ const Dashboard: React.FC = () => {
 
   useEffect(() => {
     async function loadSpots() {
-      const response = await api.get('/dashboard', { headers: { user_id } });
+      const response = await api.get('/dashboard', {
+        params: { user_id },
+        headers: { user_id },
+      });
 
       setSpots(response.data);
     }

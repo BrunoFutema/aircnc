@@ -20,6 +20,7 @@ export default createGlobalStyle`
     background: #000 url(${background}) no-repeat;
     background-size: cover;
     --webkit-font-smoothing: antialiased !important;
+    padding-bottom: 60px;
   }
 
   body, input, button {

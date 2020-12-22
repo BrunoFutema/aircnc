@@ -54,6 +54,8 @@ export const Thumbnail = styled.header<ThumbnailProps>`
   width: 100%;
   height: 120px;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   border-radius: 4px;
   background-image: ${props =>
     `url(http://localhost:3333/air-cnc-files/${props.thumb})`};

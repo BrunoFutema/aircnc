@@ -40,7 +40,7 @@ const Dashboard: React.FC = () => {
   const user_id = localStorage.getItem('user');
 
   const socket = useMemo(
-    () => io('http://localhost:3333', { query: { user_id } }),
+    () => io(`${process.env.REACT_APP_API_URL}`, { query: { user_id } }),
     [user_id],
   );
 

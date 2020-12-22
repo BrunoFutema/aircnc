@@ -58,5 +58,5 @@ export const Thumbnail = styled.header<ThumbnailProps>`
   background-position: center;
   border-radius: 4px;
   background-image: ${props =>
-    `url(http://localhost:3333/air-cnc-files/${props.thumb})`};
+    `url(${process.env.REACT_APP_API_URL}/air-cnc-files/${props.thumb})`};
 `;

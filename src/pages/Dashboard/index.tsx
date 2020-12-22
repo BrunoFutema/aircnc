@@ -114,15 +114,21 @@ const Dashboard: React.FC = () => {
         </Notifications>
 
         <Spots>
-          {spots.map(spot => (
-            <Spot key={spot.id}>
-              <Thumbnail thumb={spot.thumbnail} />
+          {spots.length >= 1 && spots ? (
+            spots.map(spot => (
+              <Spot key={spot.id}>
+                <Thumbnail thumb={spot.thumbnail} />
 
-              <strong>{spot.company}</strong>
+                <strong>{spot.company}</strong>
 
-              <span>{spot.price ? `R$ ${spot.price}/dia` : 'Gratuito'}</span>
-            </Spot>
-          ))}
+                <span>{spot.price ? `R$ ${spot.price}/dia` : 'Gratuito'}</span>
+              </Spot>
+            ))
+          ) : (
+            <div>
+              <strong>Nenhum spot cadastrado</strong>
+            </div>
+          )}
         </Spots>
 
         <Link to="/new">

@@ -46,7 +46,7 @@ const Dashboard: React.FC = () => {
 
   const handleAccept = useCallback(
     async id => {
-      await api.post(`/bookings/${id}/rejections`);
+      await api.post(`/bookings/${id}/approvals`);
 
       setRequests(requests.filter(request => request.id !== id));
     },
